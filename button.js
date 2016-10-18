@@ -1,5 +1,7 @@
 var gpio = require("gpio");
 var dash_button = require('node-dash-button');
+require('keys.js');
+
 var action = {};
 // durex = ac:63:be:24:bc:e0
 // nobo  = 50:f5:da:55:48:50
@@ -20,8 +22,7 @@ var gpio4 = gpio.export(23, {
    ready: function() {
     gpio4.on("change", function(val) {
       if (val == 1 && action['pressed']){
-        console.log("OMG OMG OMG OMG OMG SUCCESSSSSSSSSSSSSSSSSSSSS");
-        console.log("Found " + action['button'] + " !!!!!");
+        sendAlert();
         action = {};
       } else if (val == 0){
         console.log('Closed...');
@@ -33,3 +34,21 @@ var gpio4 = gpio.export(23, {
     });
    }
 });
+
+function sendAlert(action){
+  if (action.button == "durex"){
+    message = "Müll raus bringen Diggggaaa!!!"!
+  } else if (action['button'] == 'nobo'){
+    message = "Noch keine ahnung jaaaa";
+  }
+
+  var client = require('twilio')(sid, token);
+
+    client.messages.create({
+        to: number,
+        from: '+1 650-549-9548',
+        body: message,
+    }, function (err, message) {
+        console.log(message.sid);
+    });
+}
