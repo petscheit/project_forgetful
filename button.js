@@ -1,6 +1,6 @@
 var gpio = require("gpio");
 var dash_button = require('node-dash-button');
-var $ = require('jQuery');
+var $ = require('jquery');
 //import keys
 $.getScript("keys.js", function(){
    console.log("Script loaded.");
