@@ -8,7 +8,7 @@
     "node-dash-button": "^0.6.1",
     "socketwatcher": "^0.3.0",
     "twilio": "2.11.0",
-    "jQuery": "3.1.1"
+    "jQuery": "1.7.4"
   },
   "devDependencies": {},
   "scripts": {
