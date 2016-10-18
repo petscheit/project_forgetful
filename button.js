@@ -1,6 +1,8 @@
 var gpio = require("gpio");
 var dash_button = require('node-dash-button');
-require('keys.js');
+$.getScript("keys.js", function(){
+   alert("Script loaded.");
+});
 
 var action = {};
 // durex = ac:63:be:24:bc:e0
