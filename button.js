@@ -37,7 +37,7 @@ var gpio4 = gpio.export(23, {
 
 function sendAlert(action){
   if (action.button == "durex"){
-    message = "Müll raus bringen Diggggaaa!!!"!
+    message = "Müll raus bringen Diggggaaa!!!";
   } else if (action['button'] == 'nobo'){
     message = "Noch keine ahnung jaaaa";
   }
