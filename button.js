@@ -1,6 +1,6 @@
 var gpio = require("gpio");
 var dash_button = require('node-dash-button');
-var keys = require('/keys');
+var keys = require('keys');
 var action = {};
 // durex = ac:63:be:24:bc:e0
 // nobo  = 50:f5:da:55:48:50
